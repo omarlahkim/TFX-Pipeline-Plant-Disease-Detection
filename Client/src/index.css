@@ -34,7 +34,6 @@ body {
   left: 0;
   text-align: center;
   height: 6vh;
-  background: #000;
   color: #fff;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
@@ -43,6 +42,8 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
+  background: url("assets/pattern.svg") 50%/auto 100% no-repeat,
+    #000;
 }
 
 h1 {
@@ -73,10 +74,9 @@ h1 {
 
 
 .visualizer {
-
   padding: 30px;
   flex: 1;
-  color: black;
+  color: #fff;
   background-color: rgb(20, 20, 20);
 }
 
@@ -150,6 +150,7 @@ h1 {
   text-align: left;
   margin: 10px;
   padding: 10px;
+  padding-left: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -179,7 +180,6 @@ h1 {
 .suggestion-url {
   color: #F8F8F8;
   font-weight: normal;
-
   padding-left: 4px;
   padding-top: 1px;
   padding-bottom: 5px;

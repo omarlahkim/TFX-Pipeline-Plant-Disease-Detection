@@ -45,7 +45,7 @@ def Dataset_to_TFRECORD():
                 for img_file in DataFolderDirectory:
                     image_path = os.path.join(os.path.join(data_dir, folder), img_file)
                     try:
-                        if counter == 250:
+                        if counter == 10:
                             break
                         raw_file = tf.io.read_file(image_path)
                     except FileNotFoundError:

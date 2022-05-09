@@ -63,7 +63,6 @@ def _image_augmentation(image_features):
                                         (batch_size, 224, 224, 3))
   return image_features
 
-
 def _data_augmentation(feature_dict):
 
   image_features = feature_dict[_transformed_name(_IMAGE_KEY)]
@@ -127,10 +126,7 @@ def _build_keras_model() -> tf.keras.Model:
       optimizer='adam',
       metrics=['accuracy'])
   '''
-  
-
   _freeze_model_by_percentage(base_model, 0.0)
-
   '''
   return new_model
 
@@ -140,11 +136,8 @@ def decode_PNG(x):
 
 # TFX Transform will call this function.
 def preprocessing_fn(inputs):
-
   absl.logging.info('Preprocessing Started')
-
   outputs = {}
-
   image_features = tf.map_fn(
       lambda x: decode_PNG(x),
       inputs[_IMAGE_KEY],
@@ -220,7 +213,7 @@ def run_fn(fn_args: FnArgs):
       log_dir=fn_args.model_run_dir, update_freq='batch')
 
 
-  steps_per_epoch = 10 #  int(_TRAIN_DATA_SIZE / _TRAIN_BATCH_SIZE)
+  steps_per_epoch = 20 #  int(_TRAIN_DATA_SIZE / _TRAIN_BATCH_SIZE)
   total_epochs = 2  #int(fn_args.train_steps / steps_per_epoch)
   if _CLASSIFIER_EPOCHS > total_epochs:
     raise ValueError('Classifier epochs is greater than the total epochs')
