@@ -1,4 +1,4 @@
-# TensorFlow Extended Pipeline Plant Disease Detection
+# 🌱TensorFlow Extended Pipeline Plant Disease Detection🌱
 
 This project utilizes TensorFlow Extended (TFX) to implement a machine learning pipeline for detecting plant diseases. The pipeline includes data ingestion, preprocessing, model training, evaluation, and serving. It aims to provide a scalable and efficient solution for plant disease detection, which is crucial for enhancing crop production and management.
 
